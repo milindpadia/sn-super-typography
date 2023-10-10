@@ -1,0 +1,127 @@
+// Font
+:root {
+  --sn-stylekit-sans-serif-font: -apple-system, BlinkMacSystemFont, "Karla", "Atkinson Hyperlegible", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", var(--sn-stylekit-simplified-chinese-font), sans-serif;
+  --sn-stylekit-monospace-font: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, "Ubuntu Mono", "Courier New", monospace;
+  --sn-stylekit-code-font: "Fira Code", Menlo, Consolas, Monaco, monospace;
+}
+
+// Limit the width of the editor content
+.editor-content {
+  max-width: 50rem;
+}
+
+// Center in focus mode
+.focus-mode .editor {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Scrollbar
+#navigation-content,
+#notes-scrollable,
+.ContentEditable__root {
+  scrollbar-width: thin;
+}
+
+// Super Editor
+.ContentEditable__root {
+  --sn-stylekit-font-size-editor: 0.96rem;
+
+  // Padding
+  @media screen and (min-width: 768px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    .focus-mode & {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+
+    padding-bottom: 46vh;
+  }
+
+  // Headings
+  .Lexical__h1,
+  .Lexical__h2,
+  .Lexical__h3 {
+    &:not(:first-child) {
+      margin-top: 0.5em;
+    }
+
+    margin-bottom: 0.1em;
+  }
+
+  // Paragraphs
+  .Lexical__paragraph {
+    margin-bottom: 0.5em;
+  }
+
+  // Lists
+  .Lexical__ul,
+  .Lexical__ol1,
+  .Lexical__ol2,
+  .Lexical__ol3,
+  .Lexical__ol4,
+  .Lexical__ol5 {
+    margin-bottom: 0.5em;
+  }
+
+  .Lexical__nestedListItem {
+
+    .Lexical__ul,
+    .Lexical__ol1,
+    .Lexical__ol2,
+    .Lexical__ol3,
+    .Lexical__ol4,
+    .Lexical__ol5 {
+      margin-bottom: 0;
+    }
+  }
+
+  // Checklists
+  .Lexical__listItemChecked,
+  .Lexical__listItemUnchecked {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  // Blocks
+  .Lexical__embedBlock,
+  .Lexical__quote,
+  .Lexical__code,
+  .Collapsible__container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  // Quote
+  .Lexical__quote {
+    margin-left: 0;
+  }
+
+  // Collapsible
+  .Collapsible__container {
+    border-radius: 0;
+    padding-top: 3px;
+
+    .Collapsible__title::before {
+      left: 10px;
+    }
+
+    .Collapsible__title,
+    .Collapsible__content {
+      padding-left: 30px;
+    }
+  }
+
+  // Code
+  .Lexical__code {
+    font-family: var(--sn-stylekit-code-font);
+  }
+
+  // Strikethrough
+  .Lexical__textStrikethrough {
+    color: gray;
+  }
+}

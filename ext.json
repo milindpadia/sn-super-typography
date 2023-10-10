@@ -1,0 +1,13 @@
+{
+    "identifier": "io.gitlab.alping.sn-super-typography",
+    "name": "SuperTypography",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "version": "0.0.16",
+    "description": "Better typography for the Standard Notes Super Editor",
+    "url": "https://alping.gitlab.io/sn-super-typography/main.css",
+    "download_url": "https://alping.gitlab.io/sn-super-typography/sn-super-typography.zip",
+    "latest_url": "https://alping.gitlab.io/sn-super-typography/ext.json",
+    "marketing_url": "https://gitlab.com/alping/sn-super-typography",
+    "layerable": true
+}

@@ -1,0 +1,12 @@
+{
+    "name": "io.gitlab.alping.sn-super-typography",
+    "version": "0.0.16",
+    "main": "main.css",
+    "sn": {
+        "main": "main.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://gitlab.com/alping/sn-super-typography"
+    }
+}

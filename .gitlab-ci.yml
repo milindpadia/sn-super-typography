@@ -1,0 +1,17 @@
+image: node:latest
+
+before_script:
+  - apt-get -qq update && apt-get -qq install -y zip
+  - npm install -g sass
+
+pages:
+  script:
+    - sass main.scss public/main.css
+    - cp ext.json public/
+    - cp package.json public/
+    - zip -r -j public/sn-super-typography.zip public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
